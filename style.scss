@@ -64,12 +64,13 @@ header {
 .instructions {
   width: 60%;
   font-size: 16px;
+  color: #333333;
+
   h2 {
     font-family: $main-font;
     font-weight: bold;
     text-transform: capitalize;
     font-size: 1.8em;
-    color: #333333;
   }
 
   > * + * {
@@ -78,7 +79,6 @@ header {
 }
 
 .ingredients {
-  color: #333333;
   .item {
     h3 {
       font-family: $main-font;
@@ -136,14 +136,49 @@ header {
 
       span {
         font-family: $secondary-font;
-        color: #333333;
         font-size: 1em;
         line-height: 1.5em;
+
+        span {
+          font-style: italic;
+          font-weight: 500;
+        }
       }
     }
 
     > * + * {
-      margin-top: 1em;  
+      margin-top: 1em;
+    }
+  }
+}
+
+.instructions {
+  .item {
+    font-style: inherit;
+    position: relative;
+    padding-left: 60px;
+    height: 100%;
+
+    > .num {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      background-color: #f2994a;
+      padding: 10px 15px;
+      border-radius: 6px;
+
+      font-family: $main-font;
+      font-weight: bold;
+      font-size: 1.5em;
+      line-height: 100%;
+      color: white;
+    }
+
+    > p {
+      font-family: $secondary-font;
+      line-height: 1.5em;
     }
   }
 }
@@ -187,4 +222,17 @@ header {
       }
     }
   }
+}
+
+.source {
+  color: #bdbdbd;
+  font-family: $secondary-font;
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+  color: #a9a9a9;
+  font-family: $secondary-font;
+  font-weight: 600;
 }
